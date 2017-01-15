@@ -5,7 +5,7 @@ Show Me Keywords
 
 Get keywords from microstock sites by chrome extension.
 
-# Supported microstock agent
+# Supported microstock agency
 
 * Shutterstock
 
