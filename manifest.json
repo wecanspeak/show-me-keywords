@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Show Me Keywords",
+    "description": "Get keywords from microstock sites",
+    "version": "0.0.1",
+    "author": "Enzo Wang",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },    
+    "content_scripts": [ {
+        "matches":["http://www.shutterstock.com/*",
+                   "https://www.shutterstock.com/*"],
+        "js":["contentscript.js"],
+        "run_at": "document_end"
+    }],
+    "icons": { 
+        "16": "images/smk_16.png",
+        "48": "images/smk_48.png",
+        "128": "images/smk_128.png" },	
+    "permissions": [ 
+        "activeTab",
+        "tabs"
+        ], 
+    "browser_action": {
+        "default_title": "Show Me Keywords",
+        "default_icon": "images/smk_16.png"
+    }
+}
