@@ -16,10 +16,10 @@ var finalKeywordList = "";
   keywordList = document.body.querySelectorAll(queryClass);
 
   for (var i = 0; i < keywordList.length; i++) {
-    var tmp = keywordList[i].innerHTML + ",";
+    var tmp = keywordList[i].innerHTML + ", ";
     tmpList += tmp;
   }
-  finalKeywordList = tmpList.substring(0, tmpList.length - 1);
+  finalKeywordList = tmpList.substring(0, tmpList.length - 2);
 })();
 
 chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
