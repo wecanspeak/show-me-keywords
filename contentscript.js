@@ -11,7 +11,7 @@ var finalKeywordList = "";
 
   if (document.location.href.match(/http[s]\:\/\/www\.shutterstock\.com/)) {
     //alert("Shutterstock site");
-    queryClass = ".keyword";
+    queryClass = ".btn-search-pill";
   } 
   keywordList = document.body.querySelectorAll(queryClass);
 
