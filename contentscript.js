@@ -24,7 +24,9 @@ var finalKeywordList = "";
 
 chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
     if (request.action == "[From bg] show keywords") {
-      alert("Keywords: " + finalKeywordList);
+      //alert("Keywords: " + finalKeywordList);
+      chrome.runtime.sendMessage({action: "[From cs] keywords", keywords: finalKeywordList}, 
+        function(response) { });
     }
 });
 

@@ -6,3 +6,10 @@ chrome.browserAction.onClicked.addListener(function(tab) {
       {action: "[From bg] show keywords"},
       function(response) {});
 });
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.action == "[From cs] keywords") {
+      alert(request.keywords);
+    }
+});
+
